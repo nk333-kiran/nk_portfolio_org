@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Real-Time Stock Ticker — Project Details</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="transitions.css">
+</head>
+<body class="light page-transition">
+  <header class="site-header">
+    <div class="container">
+      <div class="header-row">
+        <div class="logo-container">
+          <div class="logo-badge">NK</div>
+          <a class="logo">Navaneeth Kiran</a>
+        </div>
+        <button id="menuToggle" class="menu-toggle">☰</button>
+        <nav class="nav">
+          <a href="index.html#about">About</a>
+          <a href="index.html#projects">Projects</a>
+          <a href="index.html#timeline">Timeline</a>
+          <a href="index.html#contact">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <div class="project-detail container fade-in">
+    <a href="index.html" class="back-link">← Back to Portfolio</a>
+
+    <h1>Real-Time Stock Ticker</h1>
+    <div class="project-actions">
+      <a class="btn-main" href="https://nk-123456.onrender.com/" target="_blank" rel="noopener noreferrer">Visit Site</a>
+    </div>
+    <!-- Responsive project hero (use PNG screenshots). Place real images in assets/ as stockticker.png, stockticker-1.png, stockticker-2.png -->
+  
+    <!-- Small thumbnail gallery (tap to view full image on mobile) - using PNG files -->
+  
+
+    <h2>📊 Overview</h2>
+    <p>
+      The <strong>Real-Time Stock Ticker</strong> is a dynamic web application that displays live-updating stock prices and market insights.  
+      It pulls financial data using APIs and visualizes real-time trends with smooth animations — helping users track market movements instantly.
+    </p>
+
+    <h2>⚙️ Core Concept</h2>
+    <p>
+      Designed for speed and clarity, the ticker continuously fetches stock data, updates prices without page reload,  
+      and displays stock performance in an elegant scrolling ticker interface with clean typography and color-coded indicators.
+    </p>
+
+    <h2>🧠 Working Process</h2>
+    <h3>1️⃣ Data Fetching & APIs</h3>
+    <ul>
+      <li>Uses public finance APIs such as <strong>Alpha Vantage</strong> or <strong>Yahoo Finance</strong>.</li>
+      <li>Fetches stock data (price, change %, symbol) every few seconds using <strong>JavaScript Fetch API</strong>.</li>
+      <li>Implements caching to reduce network load and API usage limits.</li>
+    </ul>
+
+    <h3>2️⃣ Front-End Animation</h3>
+    <ul>
+      <li>Pure CSS and JavaScript create a continuously moving ticker banner.</li>
+      <li>Color-coded prices — <span style="color:green;">green for gain</span>, <span style="color:red;">red for loss</span>.</li>
+      <li>Uses <strong>requestAnimationFrame</strong> for ultra-smooth, low-lag animation.</li>
+    </ul>
+
+    <h3>3️⃣ Responsive Visualization</h3>
+    <ul>
+      <li>Adapts dynamically to mobile and desktop layouts.</li>
+      <li>Integrates charts (optional) via <strong>Chart.js</strong> for detailed stock views.</li>
+      <li>Automatic dark/light mode based on user preference.</li>
+    </ul>
+
+    <h2>🔍 Technologies Used</h2>
+    <table class="tech-table">
+      <tr><th>Component</th><th>Technology</th></tr>
+      <tr><td>Frontend</td><td>HTML, CSS, JavaScript, TailwindCSS</td></tr>
+      <tr><td>APIs</td><td>Alpha Vantage / Yahoo Finance</td></tr>
+      <tr><td>Data Visualization</td><td>Chart.js</td></tr>
+      <tr><td>Backend (optional)</td><td>Node.js / Express (for API proxying)</td></tr>
+      <tr><td>Hosting</td><td>Vercel / Netlify</td></tr>
+      <tr><td>Version Control</td><td>Git & GitHub</td></tr>
+    </table>
+
+    <h2>🎯 Main Features</h2>
+    <ul>
+      <li>⚡ Live stock price updates (API-driven)</li>
+      <li>💹 Continuous ticker animation with gain/loss highlighting</li>
+      <li>📈 Real-time graph display (optional)</li>
+      <li>🌓 Dark/Light mode compatibility</li>
+      <li>📱 Fully responsive for mobile and desktop</li>
+      <li>🚀 Deployed on cloud platforms like Vercel or Netlify</li>
+    </ul>
+
+    <h2>🌈 Example Output</h2>
+    <p><strong>Example:</strong></p>
+    <blockquote>
+      “AAPL ↑ 2.35% | TSLA ↓ 1.12% | AMZN ↑ 0.84% | GOOG ↑ 1.05% — Live market ticker showing updated prices every 5 seconds.”
+    </blockquote>
+
+    <h2>🧩 Future Scope</h2>
+    <ul>
+      <li>Integration with user dashboards for personalized stock tracking</li>
+      <li>Real-time sentiment analysis using Twitter API</li>
+      <li>AI-based stock trend predictions</li>
+      <li>Mobile app version using React Native</li>
+      <li>WebSocket support for ultra-low latency updates</li>
+    </ul>
+
+    <h2>💡 Vision Statement</h2>
+    <blockquote>
+      “To make real-time market tracking accessible, beautiful, and effortless for everyone — from traders to learners.”
+    </blockquote>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    // Small gallery behavior: replace main hero src when a thumbnail is clicked
+    (function(){
+      const gallery = document.querySelectorAll('.project-thumb');
+      const heroImg = document.querySelector('.project-hero-wrapper img.project-hero');
+      if(!gallery.length || !heroImg) return;
+      gallery.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const large = btn.getAttribute('data-large');
+          if(!large) return;
+          heroImg.src = large;
+          // ensure smooth focus/scroll on mobile
+          heroImg.scrollIntoView({behavior: 'smooth', block: 'center'});
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hire3x Smart Rank — AI-Powered Candidate Ranking & Job Matching System</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="transitions.css">
+</head>
+<body class="light page-transition">
+  <header class="site-header">
+    <div class="container">
+      <div class="header-row">
+        <div class="logo-container">
+          <div class="logo-badge">NK</div>
+          <a class="logo">Navaneeth Kiran</a>
+        </div>
+        <button id="menuToggle" class="menu-toggle">☰</button>
+        <nav class="nav">
+          <a href="index.html#about">About</a>
+          <a href="index.html#projects">Projects</a>
+          <a href="index.html#timeline">Timeline</a>
+          <a href="index.html#contact">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <div class="project-detail container fade-in">
+    <a href="index.html" class="back-link">← Back to Portfolio</a>
+
+    <h1>Hire3x Smart Rank — AI-Powered Candidate Ranking &amp; Job Matching System</h1>
+    <!-- <img src="assets/hire3x.jpg" alt="Hire3x Smart Rank Screenshot" class="project-hero"> -->
+
+    <h2>📘 Overview</h2>
+    <p>
+      <strong>Hire3x Smart Rank</strong> is an intelligent hiring support system that automatically evaluates and ranks
+      candidates for multiple job roles based on <strong>skills similarity</strong>, <strong>experience level</strong>,
+      and <strong>text-based matching algorithms</strong>.
+    </p>
+    <p>
+      The platform uses advanced NLP scoring (Cosine Similarity), rule-based skill filtering, and a data-driven ranking
+      engine to help recruiters quickly identify top candidates. It is built using <strong>Streamlit</strong>, ensuring
+      a smooth, interactive, and real-time experience.
+    </p>
+    <p>
+      This solution is ideal for <strong>HR teams, startups, placement cells, and automated hiring workflows</strong>
+      that want to eliminate manual resume screening and move to instant, data-backed hiring decisions.
+    </p>
+
+    <h2>⚙️ Core Concept</h2>
+    <p>
+      The main idea behind Hire3x Smart Rank is:
+    </p>
+    <blockquote>
+      “To make hiring faster, smarter, and unbiased through automated skill–experience matching.”
+    </blockquote>
+    <p>
+      The system achieves this by:
+    </p>
+    <ul>
+      <li>AI-driven similarity comparison between job skills and candidate skills</li>
+      <li>Weighted scoring based on experience match</li>
+      <li>Filtering options for strict or flexible skill requirements</li>
+      <li>Visual charts to understand candidate ranking at a glance</li>
+      <li>Exportable CSV reports for recruiters and HR teams</li>
+    </ul>
+    <p>
+      The goal is to reduce manual effort and bring consistency, transparency, and intelligence into the hiring process.
+    </p>
+
+    <h2>🧠 Working Process</h2>
+
+    <h3>1️⃣ Upload Job Requirements</h3>
+    <ul>
+      <li>Recruiters upload a <strong>Job CSV</strong> with the following columns:</li>
+      <ul>
+        <li><code>Job Title</code></li>
+        <li><code>Required Skills</code></li>
+        <li><code>Minimum Experience</code></li>
+      </ul>
+      <li>Example row: <code>Software Engineer | Python, Flask, SQL | 2</code></li>
+    </ul>
+
+    <h3>2️⃣ Upload Candidate Profiles</h3>
+    <ul>
+      <li>Recruiters upload a <strong>Candidate CSV</strong> with the following columns:</li>
+      <ul>
+        <li><code>Name</code></li>
+        <li><code>Skills</code></li>
+        <li><code>Experience</code> (numeric value in years)</li>
+      </ul>
+      <li>Example row: <code>Aarav Kumar | Python, SQL, Data Analysis | 2</code></li>
+    </ul>
+
+    <h3>3️⃣ Skill Filtering</h3>
+    <ul>
+      <li>Before ranking, the system applies a skill filter based on recruiter choice:</li>
+      <ul>
+        <li><strong>ANY Required Skill</strong> → Candidate must match at least one required skill</li>
+        <li><strong>ALL Required Skills</strong> → Candidate must match every skill listed in the job</li>
+      </ul>
+      <li>This helps recruiters switch between strict and flexible matching modes.</li>
+    </ul>
+
+    <h3>4️⃣ Smart Match Calculation</h3>
+    <ul>
+      <li>For each candidate that passes the skill filter:</li>
+      <ul>
+        <li>Skills text is compared with job skills using <strong>Cosine Similarity</strong> (CountVectorizer-based).</li>
+        <li>Experience is normalized against the job’s minimum experience.</li>
+        <li>Final score formula: <strong>Final Match % = 70% Skills Score + 30% Experience Score</strong></li>
+      </ul>
+      <li>The result is a clear <strong>Match %</strong> for every candidate.</li>
+    </ul>
+
+    <h3>5️⃣ Ranking &amp; Visual Analysis</h3>
+    <ul>
+      <li>Candidates are sorted in descending order of <strong>Match %</strong>.</li>
+      <li>Matched skills are highlighted in bold for better readability.</li>
+      <li>An interactive <strong>bar chart</strong> (Plotly) shows compare-at-a-glance ranking per job.</li>
+      <li>Recruiters can download the ranked list as a <strong>CSV report</strong>.</li>
+    </ul>
+
+    <h3>6️⃣ Recruiter Decision</h3>
+    <ul>
+      <li>The interface clearly displays:</li>
+      <ul>
+        <li>🎯 <strong>Top matching candidate</strong> per job</li>
+        <li>📊 <strong>Full ranked candidate list</strong> with skills and experience</li>
+        <li>⬇️ <strong>Download button</strong> for exporting results</li>
+      </ul>
+      <li>This enables fast, confident decision-making for each role.</li>
+    </ul>
+
+    <h2>🔍 Technologies Used</h2>
+
+    <!-- Badge / button style tech stack -->
+    <div class="tech-stack" aria-label="Tech badges">
+      <button class="tech-badge">Python</button>
+      <button class="tech-badge">Streamlit</button>
+      <button class="tech-badge">Pandas</button>
+      <button class="tech-badge">scikit-learn</button>
+      <button class="tech-badge">CountVectorizer</button>
+      <button class="tech-badge">Cosine Similarity</button>
+      <button class="tech-badge">Plotly Express</button>
+      <button class="tech-badge">CSV Processing</button>
+      <button class="tech-badge">NLP-based Matching</button>
+      <button class="tech-badge">Set-based Skill Filters</button>
+      <button class="tech-badge">Streamlit Cloud (optional)</button>
+      <button class="tech-badge">Git</button>
+      <button class="tech-badge">GitHub</button>
+    </div>
+
+    <!-- Optional card view summarizing components (responsive) -->
+    <div class="tech-cards">
+      <div class="tech-card">
+        <h3>UI / Framework</h3>
+        <p>Streamlit for building an interactive, web-based data app.</p>
+      </div>
+      <div class="tech-card">
+        <h3>Backend Logic</h3>
+        <p>Python functions implementing ranking, filtering, and score calculation.</p>
+      </div>
+      <div class="tech-card">
+        <h3>Data Handling</h3>
+        <p>Pandas for reading CSV files, cleaning data, and generating ranked outputs.</p>
+      </div>
+      <div class="tech-card">
+        <h3>NLP Skill Matching</h3>
+        <p>scikit-learn’s <code>CountVectorizer</code> and <code>cosine_similarity</code> to compare skills text.</p>
+      </div>
+      <div class="tech-card">
+        <h3>Visualization</h3>
+        <p>Plotly Express bar charts for visualizing candidate Match % per job.</p>
+      </div>
+      <div class="tech-card">
+        <h3>Export & Reports</h3>
+        <p>CSV export of ranked candidates per job for HR team usage.</p>
+      </div>
+      <div class="tech-card">
+        <h3>Deployment (Optional)</h3>
+        <p>Streamlit Cloud / HuggingFace Spaces for online hosting and demo access.</p>
+      </div>
+      <div class="tech-card">
+        <h3>Version Control</h3>
+        <p>Git &amp; GitHub to manage source code and project versions.</p>
+      </div>
+    </div>
+
+    <h2>🎯 Main Features</h2>
+    <ul>
+      <li>📁 Upload <strong>Job CSV</strong> and <strong>Candidate CSV</strong> directly in the app</li>
+      <li>🔍 AI-powered <strong>skill matching</strong> using cosine similarity</li>
+      <li>📈 Weighted scoring combining both <strong>skills</strong> and <strong>experience</strong></li>
+      <li>🎯 Automatic identification of the <strong>Top Candidate</strong> per job</li>
+      <li>⚡ Match candidates for <strong>multiple job roles</strong> in one go</li>
+      <li>🔎 Skill filter modes — <strong>ANY</strong> or <strong>ALL</strong> required skills</li>
+      <li>🖊️ Highlighted skill matches in candidate profiles for clarity</li>
+      <li>📊 Interactive <strong>bar charts</strong> to visualize match percentages</li>
+      <li>⬇️ One-click <strong>CSV export</strong> of ranked results</li>
+      <li>🧭 Simple, fast, and recruiter-friendly interface</li>
+    </ul>
+
+    <h2>🌈 Example Output</h2>
+    <p><strong>For Job: Python Developer</strong></p>
+    <ul>
+      <li><strong>Required Skills:</strong> Python, Flask, SQL</li>
+      <li><strong>Minimum Experience:</strong> 2 years</li>
+    </ul>
+
+    <p><strong>System Output (sample ranking):</strong></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Skills</th>
+          <th>Experience (years)</th>
+          <th>Match %</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Aarav Kumar</td>
+          <td>Python, SQL, Data Analysis</td>
+          <td>2</td>
+          <td>92.4</td>
+        </tr>
+        <tr>
+          <td>Vikram Singh</td>
+          <td>Python, Machine Learning</td>
+          <td>2</td>
+          <td>85.1</td>
+        </tr>
+        <tr>
+          <td>Ananya Iyer</td>
+          <td>HTML, CSS, JavaScript</td>
+          <td>1</td>
+          <td>22.8</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>
+      The app highlights: <strong>Top Candidate: Aarav Kumar 🎯</strong> and displays a Plotly bar chart to visually compare
+      match percentages across all candidates.
+    </p>
+
+    <h2>🧩 Future Scope</h2>
+    <ul>
+      <li>🤖 AI resume parsing to extract skills and experience directly from PDF resumes</li>
+      <li>🔎 JD analyzer to auto-extract skills from unstructured job descriptions</li>
+      <li>📂 Integration into a full Applicant Tracking System (ATS)</li>
+      <li>🧠 Deep learning–based similarity models for richer matching</li>
+      <li>🌍 Batch processing for large-scale, multi-job hiring pipelines</li>
+      <li>🧾 Candidate scoring explanation — “Why this %?” for transparency</li>
+      <li>📱 Mobile-friendly UI or dedicated mobile app</li>
+      <li>🔐 Role-based login and dashboards for HR teams and managers</li>
+      <li>📊 HR analytics dashboard for insights on talent pool and hiring trends</li>
+    </ul>
+
+    <h2>💡 Vision Statement</h2>
+    <blockquote>
+      “To transform hiring into a fast, fair, and intelligent process by using AI-driven matching and data-backed decision-making.”
+    </blockquote>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Navaneeth Kiran — Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="transitions.css">
+  <script>
+    // Restore theme immediately to prevent flash
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+      document.documentElement.classList.add('dark-mode-pending');
+    }
+  </script>
+</head>
+<body class="light">
+
+  <!-- Animated Intro -->
+  <div id="intro" class="intro-split">
+    <div class="split left">
+      <div class="intro-image-container">
+        <img src="profile.png" alt="Portrait" class="intro-portrait">
+      </div>
+    </div>
+    <div class="split right">
+      <div class="intro-content">
+        <h1 class="intro-name">NAVANEETH KIRAN</h1>
+        <p class="intro-tag">UI/UX Designer · Web Designer · Full Stack Developer</p>
+        <p class="intro-subtag">Turning Ideas Into Code</p>
+        <button id="enterBtn" class="enter-btn">Enter Portfolio</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main site -->
+  <div id="site" class="site hidden">
+    <header class="site-header">
+      <div class="container header-row">
+        <div class="logo-container">
+          <div class="logo-badge">NK</div>
+          <a class="logo" >NAVANEETH KIRAN</a>
+        </div>
+        <div class="header-controls">
+          <button id="themeToggle" class="theme-toggle">🌓</button>
+          <button id="menuToggle" class="menu-toggle">☰</button>
+        </div>
+        <nav class="nav">
+          <div class="nav-list">
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#timeline">Timeline</a>
+            <a href="#contact">Contact</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main id="mainContent">
+      <section id="hero" class="hero section">
+        <div class="container">
+          <h1 class="hero-title">
+            I design & build <span class="highlight">clean, interactive</span> web experiences.
+          </h1>
+<div class="hero-badges">
+            <div class="badge accent">
+              <span class="badge-dot"></span>
+              UI/UX · Web Design
+            </div>
+            <div class="badge">
+              <span class="badge-dot"></span>
+              Full Stack Development
+            </div>
+            <div class="badge">
+              <span class="badge-dot"></span>
+              Turning ideas into code
+            </div>
+          </div>
+<br>
+<br>
+          <div class="hero-actions">
+            <a href="resume_nk.docx" class="btn-main">
+              <span>Download Resume</span>
+              <span class="btn-icon">⬇</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section reveal active">
+        <div class="container">
+          <h2>About</h2>
+          <p>I’m Navaneeth Kiran, a UI/UX designer and full stack developer driven by creativity and precision.  
+          I design intuitive, user-centered interfaces that focus on clarity and interaction.  
+          I build responsive, high-performance websites that blend art with logic.</p>
+        </div>
+      </section>
+
+      <section id="skills" class="section bg-contrast reveal">
+        <div class="container">
+          <h2>Skills</h2>
+          <div class="grid-4">
+            <div class="card">
+              <h3>Front-End</h3>
+              <p>HTML · CSS · JavaScript · React.js · Bootstrap · Tailwind CSS</p>
+            </div>
+            <div class="card">
+              <h3>Back-End</h3>
+              <p>Node.js · Python · MongoDB · PostgreSQL · RESTful APIs</p>
+            </div>
+            <div class="card">
+              <h3>Design</h3>
+              <p>Figma · Canva · UI/UX Design · WordPress</p>
+            </div>
+            <div class="card">
+              <h3>Tools</h3>
+              <p>VS Code · Git · GitHub · Firebase · Vercel</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Project Cards -->
+      <section id="projects" class="section reveal">
+        <div class="container">
+          <h2>Projects</h2>
+          <div class="grid-3">
+            <a href="ascarpath.html" class="project-card page-link">
+              <img src="ascar.png" alt="Ascarpath">
+              <h3>AscarPath</h3>
+            </a>
+            <a href="stockticker.html" class="project-card page-link">
+              <img src="stockticker.png" alt="Real-Time Stock Ticker">
+              <h3>Real-Time Stock Ticker</h3>
+            </a>
+            <a href="grammarbase.html" class="project-card page-link">
+              <img src="grammarbase.png" alt="GrammarBase">
+              <h3>GrammarBase</h3>
+            </a>
+            <a href="yaar.html" class="project-card page-link">
+              <img src="yaar.png" alt="Yaar">
+              <h3>Yaar</h3>
+            </a>
+            <a href="resumechecker.html" class="project-card page-link">
+              <img src="resumechecker.png" alt="Resume Checker">
+              <h3>Resume Checker</h3>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Timeline -->
+      <section id="timeline" class="section bg-contrast reveal">
+        <div class="container">
+          <h2>Timeline</h2>
+          <div class="timeline-wrapper">
+            <div class="timeline-item left reveal">
+              <div class="timeline-content">
+                <h3>2022</h3>
+                <p>Started my journey in web development — HTML, CSS, and design fundamentals.</p>
+              </div>
+            </div>
+            <div class="timeline-item right reveal">
+              <div class="timeline-content">
+                <h3>2023</h3>
+                <p>Explored JavaScript, React.js, and UI/UX design — built creative prototypes.</p>
+              </div>
+            </div>
+            <div class="timeline-item left reveal">
+              <div class="timeline-content">
+                <h3>2024</h3>
+                <p>Developed <strong>AscarPath</strong> — an AI-based acoustic recognition system.</p>
+              </div>
+            </div>
+            <div class="timeline-item right reveal">
+              <div class="timeline-content">
+                <h3>2025</h3>
+                <p>Created <strong>Real-Time Stock Ticker</strong> and launched my portfolio website.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section reveal">
+        <div class="container contact">
+          <div>
+            <h2>Contact</h2>
+            <p>Email: <a href="mailto:nk.designuniverse@gmail.com">nk.designuniverse@gmail.com</a></p>
+            <p>Let’s collaborate or discuss new ideas — feel free to reach out anytime!</p>
+          </div>
+          <div class="socials">
+            <a href="https://www.linkedin.com/in/navaneeth-kiran-8754nkaa/" class="social-link" aria-label="LinkedIn">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://wa.me/918754780689" class="social-link" aria-label="WhatsApp">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=61577814411688" class="social-link" aria-label="Facebook">
+              <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://www.instagram.com/d.e.s.i.g.n.universe/" class="social-link" aria-label="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <!-- <a href="https://twitter.com/" class="social-link" aria-label="Twitter">
+              <i class="fab fa-twitter"></i> -->
+            </a>
+            <a href="https://github.com/nk333-kiran" class="social-link" aria-label="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>© <span id="yearFoot"></span> Navaneeth Kiran</p>
+      </div>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
